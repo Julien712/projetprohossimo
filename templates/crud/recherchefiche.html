@@ -1,0 +1,56 @@
+{% extends 'crud/main.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_superuser == True %}
+<br>
+<div class="container-sm">
+	<div class="row">
+		<div class="col">
+			<div class="card card-body">
+				<form method="get">
+					{{myFilter.form}}
+					<button class="btn btn-primary" type="submit">Rechercher</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="card card-body">
+		<table class="table table-sm">
+			<tr>
+				<th>Nom, prénom</th>
+				<th>Téléphone</th>
+				<th>Email</th>
+				<th>Adresse</th>
+				<th>Date création</th>
+				<th>Date réception</th>
+				<th>Société</th>
+				<th>Imprimer</th>
+				<th>Modifier / Supprimer</th>
+			
+			</tr>
+
+			{% for entete in infos %}
+			<tr>
+				<td>{{entete.nom}}</td>
+				<td>{{entete.phone}}</td>
+				<td>{{entete.mail}}</td>
+				<td>{{entete.adresse}}</td>
+				<td>{{entete.curdate}}</td>
+				<td>{{entete.reception}}</td>
+				<td>{{entete.societe}}</td>
+				<td><a class="btn btn-sm btn-info" href="{% url 'impression' entete.id_entete  %}">Imprimer</a></td>
+				<td class="modifsuppr">
+					<a class="btn btn-sm btn-warning" href="{% url 'update_fiche' entete.id_entete %}">Modifier</a>
+					<a class="btn btn-sm btn-danger" href="{% url 'delete_fiche' entete.id_entete %}">Supprimer</a>
+				</td>
+			
+			</tr>
+			{% endfor %}
+
+		</table>
+	</div>
+</div>
+{% endif %}
+
+{% endblock %}

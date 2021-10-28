@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Page de connexion</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
+    <link rel="icon" type="image/png" href="{% static 'img/logo-hossimo.png' %}">
+
+    <style>
+        html {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        }
+
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        }
+
+        .bouton {
+            background-color: #0a1841;
+            color: white;
+            width: 100px;
+            border-radius: 5px;
+            margin: auto;
+        }
+
+        form {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:40px;
+        }
+        fieldset {
+            width:90%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset style="height: 360px;">
+            <legend>CONNEXION :</legend>
+
+            <label for="id_username">Nom d'utilisateur :</label>
+            {{ form.username }}
+
+            <label for="id_password">Mot de passe :</label>
+            {{ form.password }}
+
+            <input type="submit" class="bouton" name="login" id="login" value="Connexion">
+
+        </fieldset>
+    </form>
+
+</body></html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print Fiche</title>
+  <style>
+    table {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 100%;
+      /* overflow-x: auto; */
+      /* white-space: nowrap; */
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td {
+      padding: 6px 12px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="window.print();">Imprimer</button><br>
+  <table>
+    <tbody>
+      <tr>
+        <td>{{ accessoires_form.pantalon }}</td>
+        <td>{{ entete_form.nom }}</td>
+        <td>{{ entete_form.curdate }}</td>
+        <td>{{ entete_form.reception }}</td>
+        <td>{{ entete_form.phone }}</td>
+        <td>{{ entete_form.mail }}</td>
+        <td>{{ entete_form.adresse }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ accessoires_form.veste }}</td>
+        <td>{{ accessoires_form.tissu }}</td>
+        <td>{{ accessoires_form.doublure }}</td>
+        <td>{{ accessoires_form.boutonsnumero }}</td>
+        <td>{{ accessoires_form.fournisseurtissu }}</td>
+        <td>{{ accessoires_form.naturetissu }}</td>
+        <td>{{ accessoires_form.feutrenumero }}</td>
+
+      </tr>
+      <tr>
+        <td>{{ accessoires_form.manteau }}</td>
+        <td>{{ accessoires_form.griffe }}</td>
+        <td>{{ accessoires_form.vignette }}</td>
+        <td>{{ entete_form_form.mesurenumero }}</td>
+        <td>{{ veston_form.veston_taille_essaye }}</td>
+        <td>{{ veston_form.veston_taille_choisi }}</td>
+        <td>{{ veston_form.nombre_de_boutons }}</td>
+
+      </tr>
+      <tr>
+        <td>{{ accessoires_form.costume }}</td>
+        <td>{{ veston_form.demipoitrine }}</td>
+        <td>{{ veston_form.demiestomac }}</td>
+        <td>{{ veston_form.demibassin }}</td>
+        <td>{{ veston_form.largeurepaule }}</td>
+        <td>{{ veston_form.undemicarrure }}</td>
+        <td>{{ veston_form.longueur_dos_finie }}</td>
+
+      </tr>
+      <tr>
+        <td>{{ accessoires_form.troispiece }}</td>
+        <td>{{ veston_form.longueurmanchegauche }}</td>
+        <td>{{ veston_form.longueurmanchedroite }}</td>
+        <td>{{ veston_form.undemilargeurtaille }}</td>
+        <td>{{ veston_form.veston_normal }}</td>
+        <td>{{ veston_form.reins_creux }}</td>
+        <td>{{ veston_form.renverse }}</td>
+
+      </tr>
+      <tr>
+        <td>{{ accessoires_form.gilet }}</td>
+        <td>{{ veston_form.dos_rond }}</td>
+        <td>{{ veston_form.voute_penche }}</td>
+        <td>{{ veston_form.ventru }}</td>
+        <td>{{ veston_form.athletique }}</td>
+        <td>{{ veston_form.premierbouton }}</td>
+        <td>{{ veston_form.undemicroisureplus }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.undemicroisuremoins }}</td>
+        <td>{{ veston_form.decrocherdevant }}</td>
+        <td>{{ veston_form.poitrineplate }}</td>
+        <td>{{ veston_form.poitrineforte }}</td>
+        <td>{{ veston_form.largeurbassindosplus }}</td>
+        <td>{{ veston_form.largeurbassindosmoin }}</td>
+        <td>{{ veston_form.manteauavecsouspatte }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.manteauavecsousceinture }}</td>
+        <td>{{ veston_form.droitesarabat }}</td>
+        <td>{{ veston_form.enbiaisarabat }}</td>
+        <td>{{ veston_form.sansrabat }}</td>
+        <td>{{ veston_form.pocheticketexterieure }}
+        <td>{{ veston_form.sanspochepoitrine }}</td>
+        <td>{{ veston_form.deuxpochesplaquees }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.troispochesplaquees }}</td>
+        <td>{{ veston_form.pochelunette }}</td>
+        <td>{{ veston_form.brasenavant }}</td>
+        <td>{{ veston_form.brasenarriere }}</td>
+        <td>{{ veston_form.emmanchurecombler }}</td>
+        <td>{{ veston_form.emmanchurecreuser }}</td>
+        <td>{{ veston_form.brasfort }}</td>
+
+      </tr>
+      <tr>
+        <td>{{ veston_form.brasmince }}</td>
+        <td>{{ veston_form.basdemanche }}</td>
+        <td>{{ veston_form.hautdemancheplus }}</td>
+        <td>{{ veston_form.hautdemanchemoins }}</td>
+        <td>{{ veston_form.sansgarde }}</td>
+        <td>{{ veston_form.preparerboutonniere }}</td>
+        <td>{{ veston_form.executerboutonniere }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.executerboutonnierenpo }}</td>
+        <td>{{ veston_form.boutonchevauchant }}</td>
+        <td>{{ veston_form.colorismanche }}</td>
+        <td>{{ veston_form.doublagemignonette }}</td>
+        <td>{{ veston_form.coudesencuir }}</td>
+        <td>{{ veston_form.nepasmonterlesmanches }}</td>
+        <td>{{ veston_form.coucourt }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.coulong }}</td>
+        <td>{{ veston_form.coumince }}</td>
+        <td>{{ veston_form.plissouscol }}</td>
+        <td>{{ veston_form.ephautesgauche }}</td>
+        <td>{{ veston_form.ephautesdroite }}</td>
+        <td>{{ veston_form.epnormalgauche }}</td>
+        <td>{{ veston_form.epnormaldroite }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.epbassesgauche }}</td>
+        <td>{{ veston_form.epbassesdroite }}</td>
+        <td>{{ veston_form.epsemidouble }}</td>
+        <td>{{ veston_form.epsansepaulettes }}</td>
+        <td>{{ veston_form.epaulettesplusfines }}</td>
+        <td>{{ veston_form.epsanscigarette }}</td>
+        <td>{{ veston_form.osgauche }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.osdroite }}</td>
+        <td>{{ veston_form.monogrammecoloris }}</td>
+        <td>{{ veston_form.monogrammestyle }}</td>
+        <td>{{ veston_form.dosfentes }}</td>
+        <td>{{ veston_form.boutondevantcoloris }}</td>
+        <td>{{ veston_form.boutonreverscoloris }}</td>
+        <td>{{ veston_form.sansboutonniererevers }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.filboutons }}</td>
+        <td>{{ veston_form.colombiacoloris }}</td>
+        <td>{{ veston_form.amftoutescoutures }}</td>
+        <td>{{ veston_form.amf }}</td>
+        <td>{{ veston_form.bordsnonpiques }}</td>
+        <td>{{ veston_form.biaispassepoilscoloris }}</td>
+        <td>{{ veston_form.colorisboutonnieres }}</td>
+      </tr>
+      <tr>
+        <td>{{ veston_form.coloris2boutonnieres }}</td>
+        <td>{{ veston_form.coloris1boutonnieres }}</td>
+        <td>{{ com_form.commentaireveston }}</td>
+        <td>{{ pantalon_form.modeltailleessaye }}</td>
+        <td>{{ pantalon_form.modeltaillechoisi }}</td>
+        <td>{{ pantalon_form.ceinture }}</td>
+        <td>{{ pantalon_form.bassin }}</td>
+
+      </tr>
+      <tr>
+        <td>{{ pantalon_form.longueurcotegauche }}</td>
+        <td>{{ pantalon_form.longueurcotedroite }}</td>
+        <td>{{ pantalon_form.longueurentrejambegauche }}</td>
+        <td>{{ pantalon_form.longueurentrejambedroite }}</td>
+        <td>{{ pantalon_form.ardillon }}</td>
+        <td>{{ pantalon_form.basfinirevers }}</td>
+        <td>{{ pantalon_form.basnonfinirevers }}</td>
+      </tr>
+      <tr>
+        <td>{{ pantalon_form.basfinisimple }}</td>
+        <td>{{ pantalon_form.basnonfinisimple }}</td>
+        <td>{{ pantalon_form.largeurgenoux }}</td>
+        <td>{{ pantalon_form.largeurbras }}</td>
+        <td>{{ pantalon_form.montantdevantplus }}</td>
+        <td>{{ pantalon_form.montantdevantmoins }}</td>
+        <td>{{ pantalon_form.montantdosplus }}</td>
+      </tr>
+      <tr>
+
+        <td>{{ pantalon_form.montantdosmoins }}</td>
+        <td>{{ pantalon_form.passanttunnel }}</td>
+        <td>{{ pantalon_form.sanspassant }}</td>
+        <td>{{ pantalon_form.avecpatteserrage }}</td>
+        <td>{{ pantalon_form.sansagrafe }}</td>
+        <td>{{ pantalon_form.sanspatteprolongee }}</td>
+        <td>{{ pantalon_form.smokingbaguettesoie }}</td>
+      </tr>
+      <tr>
+
+        <td>{{ pantalon_form.surpiqueecouturecote }}</td>
+        <td>{{ pantalon_form.nondouble }}</td>
+        <td>{{ pantalon_form.doubledosgenoux }}</td>
+        <td>{{ pantalon_form.doubleentierementbas }}</td>
+        <td>{{ pantalon_form.fournituresnoires }}</td>
+        <td>{{ pantalon_form.ceintureantiglisse }}</td>
+        <td>{{ pantalon_form.btsbretelle }}</td>
+      </tr>
+      <tr>
+
+        <td>{{ pantalon_form.forteethautegauche }}</td>
+        <td>{{ pantalon_form.forteethautedroite }}</td>
+        <td>{{ pantalon_form.largeurcuisseplus }}</td>
+        <td>{{ pantalon_form.largeurcuissemoins }}</td>
+        <td>{{ pantalon_form.fessierplat }}</td>
+        <td>{{ pantalon_form.saillante }}</td>
+        <td>{{ pantalon_form.pointeentrejambeplus }}</td>
+      </tr>
+      <tr>
+
+        <td>{{ pantalon_form.pointeentrejambemoins }}</td>
+        <td>{{ pantalon_form.braguetteglissiere }}</td>
+        <td>{{ pantalon_form.braguetteboutons }}</td>
+        <td>{{ pantalon_form.pocherevolver }}</td>
+        <td>{{ pantalon_form.avecrabat }}</td>
+        <td>{{ pantalon_form.enleverrondsurhanches }}</td>
+        <td>{{ pantalon_form.enleverrondsurhanchesmoins }}</td>
+      </tr>
+      <tr>
+
+        <td>{{ pantalon_form.creuserfondplus }}</td>
+        <td>{{ pantalon_form.creuserfondmoins }}</td>
+        <td>{{ pantalon_form.portepoignardgauche }}</td>
+        <td>{{ pantalon_form.portepoignarddroite }}</td>
+        <td>{{ pantalon_form.pocheenbiais }}</td>
+        <td>{{ pantalon_form.pochedanslacouture }}</td>
+        <td>{{ pantalon_form.pochepassepoileesenbiais }}</td>
+      </tr>
+      <tr>
+
+        <td>{{ pantalon_form.cavalieres }}</td>
+        <td>{{ pantalon_form.sanspli }}</td>
+        <td>{{ pantalon_form.unplisversexterieur }}</td>
+        <td>{{ pantalon_form.unplisversinterieur }}</td>
+        <td>{{ pantalon_form.deuxplisversexterieur }}</td>
+        <td>{{ pantalon_form.deuxplisversinterieur }}</td>
+        <td>{{ pantalon_form.unepochemontre }}</td>
+      </tr>
+      <tr>
+
+        <td>{{ pantalon_form.pocheavecrabat }}</td>
+        <td>{{ com_form.commentairepantalon }}</td>
+        <td>{{ gilet_form.giletpoitrine }}</td>
+        <td>{{ gilet_form.emboiterdevant }}</td>
+        <td>{{ gilet_form.pincealemmanchure }}</td>
+        <td>{{ gilet_form.boutonn }}</td>
+        <td>{{ gilet_form.giletmodeltailleessaye }}</td>
+      </tr>
+      <tr>
+
+        <td>{{ gilet_form.giletestomac }}</td>
+        <td>{{ gilet_form.bordspique }}</td>
+        <td>{{ gilet_form.bordsnonpique }}</td>
+        <td>{{ gilet_form.giletsansboutonniere }}</td>
+        <td>{{ gilet_form.giletboutonnierecouleur }}</td>
+        <td>{{ gilet_form.giletmodeltaillechoisi }}</td>
+        <td>{{ gilet_form.giletouverture }}</td>
+      </tr>
+      <tr>
+        <td>{{ gilet_form.largeuralataille }}</td>
+        <td>{{ gilet_form.giletlongueurdevant }}</td>
+        <td>{{ com_form.commentairegilet }}</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</body>
+
+</html>

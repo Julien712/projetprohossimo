@@ -1,0 +1,398 @@
+/* RESET CSS */
+
+html {
+    width: 100%;
+    height: auto;
+}
+
+@font-face {
+    font-family: 'Arcon';
+    src: url("../CSS/arconregular.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    color: white;
+    font-size: 25px;
+    /* background-image: url(../img/fondbleurayure.png); */
+    background-color: #374668;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
+    
+    
+    Magnifique HEADER
+    
+    
+    
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+.hr {
+    /* centre verticalement les enfants entre eux */
+    align-items: center;
+    /* active flexbox */
+    display: flex;
+    /* garde le texte centré s’il passe sur plusieurs lignes ou si flexbox n’est pas supporté */
+    text-align: center;
+}
+
+.hr::before, .hr::after {
+    /* la couleur est volontairement absente ; ainsi elle sera celle du texte */
+    border-top: .0625em solid;
+    /* nécessaire pour afficher les pseudo-éléments */
+    content: "";
+    /* partage le reste de la largeur disponible */
+    flex: 1;
+    /* espace les traits du texte */
+}
+
+h1 {
+    margin: 0px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -0px 24px 4px rgb(11 9 43 / 80%);
+    background-color: #0a1841;
+    padding: 10px;
+}
+
+nav a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: "Arcon";
+}
+
+nav a:hover{
+    color: #9aa9b7;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    background-color: #0a1841;
+    margin-bottom: 60px;
+    font-family: "Arcon";
+    -webkit-box-shadow: 0px 5px 24px 4px rgb(11 9 43 / 80%);
+    box-shadow: 0px 5px 24px 4px rgb(11 9 43 / 80%);
+}
+
+.zone1 {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 15px;
+}
+
+.navcheck a {
+    text-decoration: none;
+}
+
+.colheader {
+    margin: 0;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+
+.entete {
+    display: flex;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.entete div label {
+    width: auto;
+}
+
+.entete input {
+    width: 190px;
+    height: 30px;
+    font-family: 'Arcon';
+}
+
+.zonetexte {
+    height: 35px;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+    ZONNING
+    
+
+
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+.rawX {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: auto;
+}
+
+.colonnes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    margin: 5px;
+    width: 25%;
+    max-width: 25%;
+    align-items: center;
+}
+
+.column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+}
+
+.column fieldset {
+    margin-bottom: 10px;
+}
+
+.horizontale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#scrollUp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+#scrollUp img {
+    height: 60px;
+}
+
+.navbr {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
+    
+    
+
+
+    DESIGN
+    
+
+    
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+.logohossimo {
+    width: 200px;
+    padding: 15px;
+}
+
+textarea, input, select, option {
+    background-color: whitesmoke;
+    height: 30px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+textarea::placeholder {
+    font-size: 16px;
+}
+
+input::placeholder {
+    font-size: 19px;
+}
+
+textarea {
+    resize: none;
+    padding-top: 15px;
+    font-family: 'Arcon';
+}
+
+.col {
+    display: flex;
+    align-items: center;
+}
+
+.col label {
+    text-align: center;
+}
+
+.check {
+    float: right;
+    height: 30px;
+    width: 30px;
+}
+
+fieldset {
+    width: 90%;
+    height: auto;
+    min-height: 150px;
+    margin: 5px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #9aa9b7;
+    border: 0px;
+    -webkit-box-shadow: 0px 5px 24px 4px rgb(11 9 43 / 80%);
+    box-shadow: 0px 5px 24px 4px rgb(11 9 43 / 80%);
+}
+
+fieldset::before {
+    width: 100%;
+    height: auto;
+}
+
+fieldset label {
+    color: #0a1841;
+    font-family: 'Arcon';
+}
+
+.pointe {
+    max-width: 100%;
+    position: relative;
+    top: 9px;
+}
+
+.pt {
+    max-width: 100%;
+    position: relative;
+    top: 1px;
+}
+
+legend, legend label {
+    border-radius: 3px;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: auto;
+    max-width: 100%;
+    font-family: "Arcon";
+    color: white;
+}
+
+legend {
+    margin-bottom: 10px;
+    background: #0a1841;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    margin: 0px;
+    min-height: 35px;
+    max-width: 80%;
+    min-width: 16%;
+}
+
+.separateur {
+    padding-bottom: 12px;
+    border-top: 2px solid white;
+    margin-top: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -0px 24px 4px rgb(11 9 43 / 80%);
+    font-family: 'Arcon';
+    font-size: 12px;
+    background-color: #0a1841;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+}
+
+.input-container input {
+    width: 90%;
+}
+
+.input-container .unit {
+    background-color: #0a1841;
+    padding-left: 5px;
+    width: 45px;
+}
+
+/****************************COMMENTAIRES****************/
+
+.COM {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px !important;
+}
+
+#id_commentaireveston, #id_commentairepantalon, #id_commentairegilet {
+    min-height: 90px;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.plusmoins {
+    color: white;
+}
+
+/*****css crud////***********/
+
+.btncentre{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bouton {
+    text-decoration: none;
+    background-color: #0a1841;
+    color: white;
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px;
+}

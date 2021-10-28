@@ -1,0 +1,18 @@
+{% load static %}
+
+<style>
+  .hello-msg{
+    font-size: 18px;
+    color: #7cd1c0;
+    margin-right: 20px;
+  }
+</style>
+
+<nav class="navbar navbar-dark bg-custom bg-gradient">
+  <img width="90px" src="{% static 'img/logo-hossimo.png' %}">
+  <ul class="navbar-nav">
+    <a class="nav-link nav-item active" href="{% url 'home' %}">Dashboard</a>
+  </ul>
+  <span class="hello-msg">Bienvenue, {{request.user}}</span>
+  <a class="btn btn-sm btn-info" href="{% url 'logout' %}">Deconnexion</a>
+</nav>

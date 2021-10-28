@@ -1,0 +1,5 @@
+# my.cnf
+[client]
+database = "hossimo"
+user = "root"
+password = ""

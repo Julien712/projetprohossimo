@@ -1,0 +1,25 @@
+{%  extends 'crud/main.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_superuser == True %}
+
+<br>
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+			
+			<p>Etes-vous sûr de vouloir supprimer "{{entete_form.nom}}"?</p>
+			
+			<form action="{% url 'delete_fiche' entete_form.id_entete  %}" method="POST">
+				
+				{% csrf_token %}
+				<a class="btn btn-warning" href="{% url 'home' %}">Annuler</a>
+				
+				<input class="btn btn-danger" type="submit" name="Confirm">
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endif %}
+{% endblock %}

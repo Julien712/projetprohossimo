@@ -1,0 +1,1510 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HOSSIMO</title>
+    <link rel="stylesheet" href="CSS/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/logo-hossimo.png' %}">
+</head>
+
+<body>
+    <nav><a href="{% url 'home' %}">Dashboard</a></nav>
+    <form method="POST" id="top">
+        <header>
+            {% csrf_token %}
+            <div class="zone1">
+                <div class="navigation">
+
+                    <div class="navcheck">
+                        <label for="id_pantalon">Pantalon </label><a href="#ancre-pantalon"> &#128317;</a>
+                        {{ accessoires_form.pantalon }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="navcheck">
+                        <label for="id_veste">Veste </label><a href="#ancre-veston"> &#128317;</a>
+                        {{ accessoires_form.veste }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="navcheck">
+                        <label for="id_manteau">Manteau</label>
+                        {{ accessoires_form.manteau }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="navcheck">
+                        <label for="id_costume">Costume</label>
+                        {{ accessoires_form.costume }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="navcheck">
+                        <label for="id_troispiece">3 Pièces</label>
+                        {{ accessoires_form.troispiece }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="navcheck">
+                        <label for="id_gilet">Gilet </label><a href="#ancre-gilet"> &#128317;</a>
+                        {{ accessoires_form.gilet }}
+                    </div>
+                </div>
+
+                <div class="colheader">
+                    <div class="entete">
+                        <div class="navbr">
+                            <label for="id_nom"><strong>Nom prénom :</strong></label>
+                            {{ entete_form.nom }}
+                        </div>
+
+                        <div class="navbr">
+                            <label for="id_curdate">Date :</label>
+                            {{ entete_form.curdate }}
+                        </div>
+
+                        <div class="navbr">
+                            <label for="id_reception">Réception :</label>
+                            {{ entete_form.reception }}
+                        </div>
+                    </div>
+
+                    <div class="entete">
+                        <div class="navbr">
+                            <label for="id_nom">Téléphone :</label>
+                            {{ entete_form.phone }}
+                        </div>
+
+                        <div class="navbr">
+                            <label for="id_curdate">Email :</label>
+                            {{ entete_form.mail }}
+                        </div>
+
+                        <div class="navbr">
+                            <label for="id_reception">Adresse :</label>
+                            {{ entete_form.adresse }}
+                        </div>
+                    </div>
+
+                    <div class="entete">
+                        <div class="navbr">
+                            <label for="id_tissu">Tissu :</label>
+                            {{ accessoires_form.tissu }}
+                        </div>
+
+                        <div class="navbr">
+                            <label for="id_doublure">Doublure :</label>
+                            {{ accessoires_form.doublure }}
+                        </div>
+
+                        <div class="navbr">
+                            <label for="id_boutonsnumero">Boutons n° :</label>
+                            {{ accessoires_form.boutonsnumero }}
+                        </div>
+                    </div>
+
+                    <div class="entete">
+                        <div class="navbr">
+                            <label for="id_fournisseurtissu">Fournisseur :</label>
+                            {{ accessoires_form.fournisseurtissu }}
+                        </div>
+
+                        <div class="navbr">
+                            <label for="id_naturetissu">Nature tissu :</label>
+                            {{ accessoires_form.naturetissu }}
+                        </div>
+
+                        <div class="navbr">
+                            <label for="id_feutrenumero">Feutre n° :</label>
+                            {{ accessoires_form.feutrenumero }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="zone1">
+                <div class="navigation">
+                    <div class="navcheck">
+                        <label for="id_griffe">Griffe</label>
+                        {{ accessoires_form.griffe }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="navcheck">
+                        <label for="id_vignette">Vignette</label>
+                        {{ accessoires_form.vignette }}
+                    </div>
+                </div>
+                <div class="colheader">
+                    <div class="entete">
+                        <div class="navbr">
+                            <label for="id_mesurenumero"><strong>Mesure N° :</strong></label>
+                            {{ entete_form.mesurenumero }}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <h1 class="hr">
+                <img class="logohossimo" src="{% static 'img/logo-hossimo.png' %}" alt="logo hossimo">
+            </h1>
+        </header>
+
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+
+        <div>
+            <span class="hr" id="ancre-veston">
+                <h3> Veste </h3>
+            </span>
+            <div class="rawX">
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label>VESTON</label></legend>
+                        <input name="societe" type="text" id="vestonsociete" placeholder="Societe" disabled>
+                        <input name="mesurenumero" type="number" id="vestonnumero" placeholder="Numéro" disabled>
+
+                    </fieldset>
+
+                </div>
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_veston_taille_essaye">MODELE / TAILLE ESSAYÉ</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.veston_taille_essaye }}
+                        </div>
+
+                    </fieldset>
+
+                </div>
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_veston_taille_choisi">MODELE / TAILLE CHOISI</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.veston_taille_choisi }}
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_nombre_de_boutons">NOMBRE DE BOUTONS</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.nombre_de_boutons }}
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+            <!-- RAW2 -->
+
+            <div class="rawX">
+
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_demipoitrine">1/2 POITRINE</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.demipoitrine }}
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_demiestomac">1/2 ESTOMAC</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.demiestomac }}
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_demibassin">1/2 BASSIN</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.demibassin }}
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_largeurepaule">LARGEUR ÉPAULE</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.largeurepaule }}
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+            <!-- RAW3 -->
+
+            <div class="rawX">
+
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_undemicarrure">1/2 CARRURE</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.undemicarrure }}
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_longueur_dos_finie">LONGUEUR DOS FINIE</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.longueur_dos_finie }}
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label>LONGUEUR MANCHE</label></legend>
+                        <div class="col">
+                            <label for="id_longueurmanchegauche">G </label>
+                            {{ veston_form.longueurmanchegauche }}
+                        </div>
+                        <div class="col">
+                            <label for="id_longueurmanchedroite">D </label>
+                            {{ veston_form.longueurmanchedroite }}
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_undemilargeurtaille">1/2 LARGEUR À LA TAILLE</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.undemilargeurtaille }}
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+            <!-- RAW4 -->
+
+            <div class="rawX">
+
+                <div class="colonnes">
+
+                    <fieldset>
+                        <legend><label for="id_veston_normal">NORMAL</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.veston_normal }}
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+
+                    <fieldset>
+
+                        <legend><label for="id_reins_creux">REINS-CREUX</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.reins_creux }}
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+
+                    <fieldset>
+
+                        <legend><label for="id_renverse">RENVERSÉ</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.renverse }}
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+
+                    <fieldset>
+
+                        <legend><label for="id_dos_rond">DOS ROND</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.dos_rond }}
+                        </div>
+
+                    </fieldset>
+
+                </div>
+            </div>
+
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+            <!-- RAW5 -->
+
+            <div class="rawX">
+
+                <div class="colonnes">
+                    <fieldset>
+
+                        <legend><label for="id_voute_penche">VOÛTÉ</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.voute_penche }}
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+
+                    <fieldset>
+
+                        <legend><label for="id_ventru">ESTOMAC FORT</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.ventru }}
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+                    <fieldset>
+
+                        <legend><label for="id_athletique">ATHLÉTIQUE</label></legend>
+                        <div class="horizontale">
+                            {{ veston_form.athletique }}
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="colonnes">
+                    <fieldset>
+                        <legend><label for="id_premierbouton">HT 1ER BOUTON</label></legend>
+                        {{ veston_form.premierbouton }}
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="rawX">
+
+                <!-- seaparateur colonne 1 GAUCHE-->
+                <!-- seaparateur colonne 1 GAUCHE-->
+                <!-- seaparateur colonne 1 GAUCHE-->
+                <!-- seaparateur colonne 1 GAUCHE-->
+                <!-- seaparateur colonne 1 GAUCHE-->
+
+                <div class="column">
+
+                    <fieldset>
+
+                        <legend><label>1/2 CROISURE</label></legend>
+                        <div class="col">
+                            <label for="id_undemicroisureplus"><span>➕</span></label>
+                            {{ veston_form.undemicroisureplus }}
+                        </div>
+
+                        <div class="col">
+                            <label for="id_undemicroisuremoins"><span>➖</span></label>
+                            {{ veston_form.undemicroisuremoins }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>POITRINE</legend>
+                        <div class="horizontale">
+                            <label for="id_decrocherdevant">Décrocher devant</label>
+                        </div>
+                        {{ veston_form.decrocherdevant }}
+
+                        <div class="horizontale">
+                            <label for="id_poitrineplate">Plate</label>
+                        </div>
+                        {{ veston_form.poitrineplate }}
+
+                        <div class="horizontale" style="margin-top: 10px;">
+                            <label for="id_poitrineforte">Forte</label><br>
+                            {{ veston_form.poitrineforte }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>LARGEUR BASSIN-DOS</legend>
+                        <div class="col">
+                            <label for="id_largeurbassindosplus"><span>➕</span></label>
+                            {{ veston_form.largeurbassindosplus }}
+                        </div>
+                        <div class="col">
+                            <label for="id_largeurbassindosmoin"><span>➖</span></label>
+                            {{ veston_form.largeurbassindosmoin }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>MANTEAU</legend>
+                        <div class="horizontale">
+                            <label for="id_manteauavecsouspatte">Manteau avec sous patte</label>
+                            {{ veston_form.manteauavecsouspatte }}
+                        </div>
+
+                        <div class="horizontale">
+                            <label for="id_manteauavecsousceinture">Manteau avec ceinture</label>
+                            {{ veston_form.manteauavecsousceinture }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>POCHES</legend>
+                        <div class="horizontale">
+                            <label for="id_droitesarabat">Droites à rabat</label>
+                            {{ veston_form.droitesarabat }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_enbiaisarabat">Biais à rabat</label>
+                            {{ veston_form.enbiaisarabat }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_sansrabat">Sans rabat</label>
+                            {{ veston_form.sansrabat }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_pocheticketexterieure">P. ticket extérieure</label>
+                            {{ veston_form.pocheticketexterieure }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_sanspochepoitrine">Sans P. poitrine</label>
+                            {{ veston_form.sanspochepoitrine }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_deuxpochesplaquees">2 P. plaquées</label>
+                            {{ veston_form.deuxpochesplaquees }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_troispochesplaquees">3 P. plaquées</label>
+                            {{ veston_form.troispochesplaquees }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_pochelunette">Poche lunette</label>
+                            {{ veston_form.pochelunette }}
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <!-- seaparateur colomnes 2 MIDGAUCHE-->
+                <!-- seaparateur colomnes 2 MIDGAUCHE-->
+                <!-- seaparateur colomnes 2 MIDGAUCHE-->
+                <!-- seaparateur colomnes 2 MIDGAUCHE-->
+                <!-- seaparateur colomnes 2 MIDGAUCHE-->
+
+                <div class="column">
+
+                    <fieldset>
+                        <legend>BRAS</legend>
+                        <label for="id_brasenavant">En avant</label>
+                        {{ veston_form.brasenavant }}
+
+
+
+                        <label for="id_brasenarriere">En arrière</label>
+                        {{ veston_form.brasenarriere }}
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>EMMANCHURE</legend>
+                        <label for="id_emmanchurecombler">Combler</label>
+                        {{ veston_form.emmanchurecombler }}
+
+                        <label for="id_emmanchurecreuser">Creuser</label>
+                        {{ veston_form.emmanchurecreuser }}
+
+                        <label for="id_brasfort">Bras fort</label>
+                        {{ veston_form.brasfort }}
+
+                        <label for="id_brasmince">Bras mince</label>
+                        {{ veston_form.brasmince }}
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>1/2 LARGEUR DE MANCHE</legend>
+                        <label for="id_basdemanche">Bas de manche</label>
+                        {{ veston_form.basdemanche }}
+
+                        <label>Haut de manche</label>
+
+                        <div class="col">
+                            <label for="id_hautdemancheplus"><span>➕</span></label>
+                            {{ veston_form.hautdemancheplus }}
+
+                        </div>
+                        <div class="col">
+                            <label for="id_hautdemanchemoins"><span>➖</span></label>
+                            {{ veston_form.hautdemanchemoins }}
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>MANCHES</legend>
+                        <div class="horizontale">
+                            <label for="id_sansgarde">Sans garde</label>
+                            {{ veston_form.sansgarde }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_preparerboutonniere">Préparer boutonnière</label>
+                            {{ veston_form.preparerboutonniere }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_executerboutonniere">Exécuter boutonnière</label>
+                            {{ veston_form.executerboutonniere }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_executerboutonnierenpo">Exécuter boutonnière ne pas ouvrir</label>
+                            {{ veston_form.executerboutonnierenpo }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_boutonchevauchant">Bouton chevauchant</label>
+                            {{ veston_form.boutonchevauchant }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>DOUBLAGE MANCHE</legend>
+                        <label for="id_colorismanche">Coloris</label>
+                        {{ veston_form.colorismanche }}
+
+
+                        <div class="horizontale">
+                            <label for="id_doublagemignonette">Doublage mignonette (blanc rayé)</label>
+                            {{ veston_form.doublagemignonette }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_coudesencuir">Coudes en cuir</label>
+                            {{ veston_form.coudesencuir }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_nepasmonterlesmanches">Ne pas monter les manches</label>
+                            {{ veston_form.nepasmonterlesmanches }}
+                        </div>
+
+                    </fieldset>
+
+                </div>
+
+                <!-- seaparateur colomnes 3 MIDDROITE-->
+                <!-- seaparateur colomnes 3 MIDDROITE-->
+                <!-- seaparateur colomnes 3 MIDDROITE-->
+                <!-- seaparateur colomnes 3 MIDDROITE-->
+                <!-- seaparateur colomnes 3 MIDDROITE-->
+
+                <div class="column">
+                    <fieldset>
+                        <legend>COU</legend>
+
+                        <label for="id_coucourt">Court</label>
+                        {{ veston_form.coucourt }}
+
+                        <label for="id_coulong">Long</label>
+                        {{ veston_form.coulong }}
+
+                        <label for="id_coumince">Mince</label>
+                        {{ veston_form.coumince }}
+
+                        <label for="id_plissouscol">Plis sous col</label>
+                        {{ veston_form.plissouscol }}
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>EPAULES</legend>
+                        <label>Hautes</label>
+                        <div class="col">
+                            <label for="id_ephautesgauche">G </label>
+                            {{ veston_form.ephautesgauche }}
+                        </div>
+                        <div class="col">
+                            <label for="id_ephautesdroite">D </label>
+                            {{ veston_form.ephautesdroite }}
+                        </div>
+
+                        <div class="separateur"></div>
+
+                        <label>Normales</label>
+                        <div class="col">
+                            <label for="id_epnormalgauche">G </label>
+                            {{ veston_form.epnormalgauche }}
+                        </div>
+                        <div class="col">
+                            <label for="id_epnormaldroite">D </label>
+                            {{ veston_form.epnormaldroite }}
+                        </div>
+
+                        <div class="separateur"></div>
+
+                        <label>Basses</label>
+                        <div class="col">
+                            <label for="id_epbassesgauche">G </label>
+                            {{ veston_form.epbassesgauche }}
+                        </div>
+                        <div class="col">
+                            <label for="id_epbassesdroite">D </label>
+                            {{ veston_form.epbassesdroite }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="horizontale">
+                            <label for="id_epsemidouble">Semi double</label>
+                            {{ veston_form.epsemidouble }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <div class="horizontale">
+                            <label for="id_epsansepaulettes">Sans épaulette</label>
+                            {{ veston_form.epsansepaulettes }}
+                        </div>
+                        <div class="separateur"></div>
+
+
+                        <div class="horizontale">
+                            <label for="id_epaulettesplusfines">Epaulettes plus fines</label>
+                            {{ veston_form.epaulettesplusfines }}
+                        </div>
+                        <div class="separateur"></div>
+
+
+                        <div class="horizontale">
+                            <label for="id_epsanscigarette">Sans cigarette</label>
+                            {{ veston_form.epsanscigarette }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>OMOPLATES SAILLANTES</legend>
+                        <div class="col">
+                            <label for="id_osgauche">G </label>
+                            {{ veston_form.osgauche }}
+                        </div>
+                        <div class="col">
+                            <label for="id_osdroite">D </label>
+                            {{ veston_form.osdroite }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>MONOGRAMME</legend>
+                        <div><label for="id_monogrammecoloris">Coloris :</label></div>
+                        {{ veston_form.monogrammecoloris }}
+
+                        <div><label for="id_monogrammestyle">Style :</label></div>
+                        {{ veston_form.monogrammestyle }}
+
+                    </fieldset>
+
+                </div>
+
+                <!-- seaparateur colomnes 4 DROITE-->
+                <!-- seaparateur colomnes 4 DROITE-->
+                <!-- seaparateur colomnes 4 DROITE-->
+                <!-- seaparateur colomnes 4 DROITE-->
+                <!-- seaparateur colomnes 4 DROITE-->
+
+                <div class="column">
+
+                    <fieldset>
+                        <legend>DOS</legend>
+                        <label>Fentes :</label>
+                        <div>
+                            {{ veston_form.dosfentes }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>BOUTONNIERE</legend>
+                        <label for="id_boutondevantcoloris">Devant coloris</label>
+                        {{ veston_form.boutondevantcoloris }}
+
+                        <label for="id_boutonreverscoloris">Revers coloris</label>
+                        {{ veston_form.boutonreverscoloris }}
+
+                        <div class="horizontale">
+                            <label for="id_sansboutonniererevers">Sans boutonnière Revers</label>
+                            {{ veston_form.sansboutonniererevers }}
+                        </div>
+                        <div class="separateur"></div>
+
+                        <label for="id_filboutons">Fil boutons</label>
+                        {{ veston_form.filboutons }}
+
+                        <label for="id_colombiacoloris">Colombia coloris</label>
+                        {{ veston_form.colombiacoloris }}
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>DEVANT</legend>
+                        <label for="id_amftoutescoutures">AMF toutes coutures</label>
+                        <div class="input-container">
+                            {{ veston_form.amftoutescoutures }}
+                            <span class="unit">mm</span>
+                        </div>
+
+                        <label for="id_amf">AMF</label>
+                        <div class="input-container">
+                            {{ veston_form.amf }}
+                            <span class="unit">mm</span>
+                        </div>
+
+                        <div class="horizontale">
+                            <label for="id_bordsnonpiques">Bords non piqués</label>
+                            {{ veston_form.bordsnonpiques }}
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>COLORIS</legend>
+                        <label for="id_biaispassepoilscoloris">Biais+passepoils intérieurs</label>
+                        {{ veston_form.biaispassepoilscoloris }}
+
+                        <label for="id_colorisboutonnieres">Boutonnières</label>
+                        {{ veston_form.colorisboutonnieres }}
+
+                        <label for="id_coloris2boutonnieres">2ème Boutonnière</label>
+                        {{ veston_form.coloris2boutonnieres }}
+
+                        <label for="id_coloris1boutonnieres">1ère Boutonnière</label>
+                        {{ veston_form.coloris1boutonnieres }}
+
+                    </fieldset>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+        <!-- VESTON -->
+
+        <div class="COM">
+            {{ com_form.commentaireveston }}
+        </div>
+
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+        <!-- PANTALON -->
+
+        <span class="hr" id="ancre-pantalon">
+            <h2> Pantalon </h2>
+        </span>
+
+        <div class="rawX">
+
+            <div class="colonnes">
+                <fieldset>
+                    <legend><label>PANTALON</label></legend>
+                    <input name="pantalonsociete" type="text" id="pantalonsociete" placeholder="societe" disabled>
+                    <input name="pantalonnumero" type="number" id="pantalonnumero" placeholder="numéro" disabled>
+                </fieldset>
+            </div>
+
+            <div class="colonnes">
+                <fieldset>
+                    <legend><label for="id_modeltailleessaye">MODELE / TAILLE ESSAYÉ</label></legend>
+                    {{ pantalon_form.modeltailleessaye }}
+
+                </fieldset>
+            </div>
+
+            <div class="colonnes">
+                <fieldset>
+
+                    <legend><label for="id_modeltaillechoisi">MODELE / TAILLE CHOISI</label></legend>
+                    {{ pantalon_form.modeltaillechoisi }}
+
+                </fieldset>
+            </div>
+
+            <div class="colonnes"></div>
+
+        </div>
+
+        <div class="rawX">
+
+            <!-- seaparateur colomnes PANTALON 1 GAUCHE-->
+            <!-- seaparateur colomnes PANTALON 1 GAUCHE-->
+            <!-- seaparateur colomnes PANTALON 1 GAUCHE-->
+            <!-- seaparateur colomnes PANTALON 1 GAUCHE-->
+            <!-- seaparateur colomnes PANTALON 1 GAUCHE-->
+
+            <div class="column">
+
+                <fieldset>
+                    <legend><label for="id_ceinture">1/2 CEINTURE</label></legend>
+                    {{ pantalon_form.ceinture }}
+                </fieldset>
+
+                <fieldset>
+                    <legend><label for="id_bassin">1/2 BASSIN</label></legend>
+                    {{ pantalon_form.bassin }}
+                </fieldset>
+
+                <fieldset>
+                    <legend>LONGUEUR<br>cote(ss ceinture)</legend>
+                    <div class="col">
+                        <label for="id_longueurcotegauche">G </label>
+                        {{ pantalon_form.longueurcotegauche }}
+                    </div>
+
+                    <div class="col">
+                        <label for="id_longueurcotedroite">D </label>
+                        {{ pantalon_form.longueurcotedroite }}
+                    </div>
+
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>LONGUEUR ENTREJAMBE</legend>
+                    <div class="col">
+                        <label for="id_longueurentrejambegauche">G </label>
+                        {{ pantalon_form.longueurentrejambegauche }}
+                    </div>
+                    <div class="col">
+                        <label for="id_longueurentrejambedroite">D </label>
+                        {{ pantalon_form.longueurentrejambedroite }}
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <div class="horizontale">
+                        <label for="id_ardillon">Ardillon</label>
+                        {{ pantalon_form.ardillon }}
+                    </div>
+
+                    <div class="horizontale">
+                        <label for="id_basfinirevers">Bas fini revers</label>
+                    </div>
+                    {{ pantalon_form.basfinirevers }}
+
+                    <div class="horizontale">
+                        <label for="id_basnonfinirevers">Bas non fini revers</label>
+                        {{ pantalon_form.basnonfinirevers }}
+                    </div>
+
+                    <div class="horizontale">
+                        <label for="id_basfinisimple">Bas fini simple</label>
+                        {{ pantalon_form.basfinisimple }}
+                    </div>
+
+                    <div class="horizontale">
+                        <label for="id_basnonfinisimple">Bas non fini simple</label>
+                        {{ pantalon_form.basnonfinisimple }}
+                    </div>
+
+                </fieldset>
+
+            </div>
+
+
+            <!-- seaparateur colomnes PANTALON 2 MIDGAUCHE-->
+            <!-- seaparateur colomnes PANTALON 2 MIDGAUCHE-->
+            <!-- seaparateur colomnes PANTALON 2 MIDGAUCHE-->
+            <!-- seaparateur colomnes PANTALON 2 MIDGAUCHE-->
+            <!-- seaparateur colomnes PANTALON 2 MIDGAUCHE-->
+
+            <div class="column">
+
+                <fieldset>
+                    <legend><label for="id_largeurgenoux">LARGEUR GENOUX</label></legend>
+                    {{ pantalon_form.largeurgenoux }}
+                </fieldset>
+
+                <fieldset>
+                    <legend><label for="id_largeurbras">LARGEUR BAS</label></legend>
+                    {{ pantalon_form.largeurbras }}
+                </fieldset>
+
+                <fieldset>
+                    <legend>MONTANT DEVANT</legend>
+                    <div class="col">
+                        <label for="id_montantdevantplus"><span>➕</span></label>
+                        {{ pantalon_form.montantdevantplus }}
+                    </div>
+                    <div class="col">
+                        <label for="id_montantdevantmoins"><span>➖</span></label>
+                        {{ pantalon_form.montantdevantmoins }}
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>MONTANT DOS</legend>
+                    <div class="col">
+                        <label for="id_montantdosplus"><span>➕</span></label>
+                        {{ pantalon_form.montantdosplus }}
+                    </div>
+                    <div class="col">
+                        <label for="id_montantdosmoins"><span>➖</span></label>
+                        {{ pantalon_form.montantdosmoins }}
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <div class="horizontale">
+                        <label for="id_passanttunnel">Passant Tunnel</label>
+                        {{ pantalon_form.passanttunnel }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_sanspassant">Sans Passant</label>
+                        {{ pantalon_form.sanspassant }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_avecpatteserrage">Avec Patte Serrage</label>
+                        {{ pantalon_form.avecpatteserrage }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_sansagrafe">Sans Agrafe</label>
+                        {{ pantalon_form.sansagrafe }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_sanspatteprolongee">Sans Patte Prolongée</label>
+                        {{ pantalon_form.sanspatteprolongee }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_smokingbaguettesoie">Smoking Baguette Soie</label>
+                        {{ pantalon_form.smokingbaguettesoie }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_surpiqueecouturecote">Surpiquée Couture Côté</label>
+                        {{ pantalon_form.surpiqueecouturecote }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_nondouble">Non Doublé</label>
+                        {{ pantalon_form.nondouble }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_doubledosgenoux">Doublé Dos Genoux</label>
+                        {{ pantalon_form.doubledosgenoux }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_doubleentierementbas">Doublé Entièrement Bas</label>
+                        {{ pantalon_form.doubleentierementbas }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_fournituresnoires">Fournitures Noires</label>
+                        {{ pantalon_form.fournituresnoires }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_ceintureantiglisse">Ceinture Antiglisse</label>
+                        {{ pantalon_form.ceintureantiglisse }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_btsbretelle">BTS Bretelle</label>
+                        {{ pantalon_form.btsbretelle }}
+                    </div>
+
+                </fieldset>
+
+            </div>
+
+            <!-- seaparateur colomnes PANTALON 3 MIDDROITE-->
+            <!-- seaparateur colomnes PANTALON 3 MIDDROITE-->
+            <!-- seaparateur colomnes PANTALON 3 MIDDROITE-->
+            <!-- seaparateur colomnes PANTALON 3 MIDDROITE-->
+            <!-- seaparateur colomnes PANTALON 3 MIDDROITE-->
+
+            <div class="column">
+
+                <fieldset>
+                    <legend>HANCHES<br>+ Forte et Haute</legend>
+                    <div class="col">
+                        <label for="id_forteethautegauche">G </label>
+                        {{ pantalon_form.forteethautegauche }}
+                    </div>
+                    <div class="col">
+                        <label for="id_forteethautedroite">D </label>
+                        {{ pantalon_form.forteethautedroite }}
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>LARGEUR CUISSE</legend>
+                    <div class="col">
+                        <label for="id_largeurcuisseplus"><span>➕</span></label>
+                        {{ pantalon_form.largeurcuisseplus }}
+                    </div>
+                    <div class="col">
+                        <label for="id_largeurcuissemoins"><span>➖</span></label>
+                        {{ pantalon_form.largeurcuissemoins }}
+                    </div>
+
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>FESSIER</legend>
+                    <label for="id_fessierplat">Plat</label>
+                    {{ pantalon_form.fessierplat }}
+
+                    <div class="horizontale">
+                        <label for="id_saillante">Saillante (2 pinces dos)</label>
+                        {{ pantalon_form.saillante }}
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>POINTE<br>ENTRE-JAMBE</legend>
+                    <div class="col">
+                        <label for="id_pointeentrejambeplus"><span>➕</span></label>
+                        {{ pantalon_form.pointeentrejambeplus }}
+                    </div>
+                    <div class="col">
+                        <label for="id_pointeentrejambemoins"><span>➖</span></label>
+                        {{ pantalon_form.pointeentrejambemoins }}
+                    </div>
+
+
+                </fieldset>
+
+                <fieldset>
+
+                    <div class="horizontale">
+                        <label for="id_braguetteglissiere">Braguette glissière</label>
+                        {{ pantalon_form.braguetteglissiere }}
+                    </div>
+
+                    <div class="horizontale">
+                        <label for="id_braguetteboutons">Braguette boutons</label>
+                        {{ pantalon_form.braguetteboutons }}
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>POCHES REVOLVER</legend>
+                    {{ pantalon_form.pocherevolver }}
+
+                    <div class="horizontale">
+                        <label for="id_avecrabat">Avec Rabat</label>
+                        {{ pantalon_form.avecrabat }}
+                    </div>
+
+                </fieldset>
+
+            </div>
+
+            <!-- seaparateur colomnes PANTALON 4 DROITE-->
+            <!-- seaparateur colomnes PANTALON 4 DROITE-->
+            <!-- seaparateur colomnes PANTALON 4 DROITE-->
+            <!-- seaparateur colomnes PANTALON 4 DROITE-->
+            <!-- seaparateur colomnes PANTALON 4 DROITE-->
+
+            <div class="column">
+
+                <fieldset>
+                    <legend>ENLEVER ROND SUR HANCHES</legend>
+                    <div class="col">
+                        <label for="id_enleverrondsurhanches"><span>➕</span></label>
+                        {{ pantalon_form.enleverrondsurhanches }}
+                    </div>
+                    <div class="col">
+                        <label for="id_enleverrondsurhanchesmoins"><span>➖</span></label>
+                        {{ pantalon_form.enleverrondsurhanchesmoins }}
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>CREUSER FOND</legend>
+                    <div class="col">
+                        <label for="id_creuserfondplus"><span>➕</span></label>
+                        {{ pantalon_form.creuserfondplus }}
+                    </div>
+                    <div class="col">
+                        <label for="id_creuserfondmoins"><span>➖</span></label>
+                        {{ pantalon_form.creuserfondmoins }}
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>PORTE<br>POIGNARD</legend>
+                    <div class="col">
+                        <label for="id_portepoignardgauche"><span>G </span></label>
+                        {{ pantalon_form.portepoignardgauche }}
+                    </div>
+
+                    <div class="col">
+                        <label for="id_portepoignarddroite"><span>D </span></label>
+                        {{ pantalon_form.portepoignarddroite }}
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>POCHES COTEES</legend>
+                    <div class="horizontale">
+                        <label for="id_pocheenbiais">En biais</label>
+                        {{ pantalon_form.pocheenbiais }}
+                    </div>
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_pochedanslacouture">Dans la Couture</label>
+                        {{ pantalon_form.pochedanslacouture }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_pochepassepoileesenbiais">Passepoilées en biais</label>
+                        {{ pantalon_form.pochepassepoileesenbiais }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_cavalieres">Cavalières</label>
+                        {{ pantalon_form.cavalieres }}
+                    </div>
+                </fieldset>
+
+
+
+                <fieldset>
+                    <legend>PLIS SUR<br>DEVANT</legend>
+                    <div class="horizontale">
+                        <label for="id_sanspli">Sans Pli</label>
+                        {{ pantalon_form.sanspli }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_unplisversexterieur">1 Pli vers extérieur</label>
+                        {{ pantalon_form.unplisversexterieur }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_unplisversinterieur">1 Pli vers intérieur</label>
+                        {{ pantalon_form.unplisversinterieur }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_deuxplisversexterieur">2 Plis vers extérieur</label>
+                        {{ pantalon_form.deuxplisversexterieur }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_deuxplisversinterieur">2 Plis vers intérieur</label>
+                        {{ pantalon_form.deuxplisversinterieur }}
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="horizontale">
+                        <label for="id_unepochemontre">1 poche montre</label>
+                        {{ pantalon_form.unepochemontre }}
+                    </div>
+
+                    <div class="horizontale">
+                        <label for="id_pocheavecrabat">Avec rabat</label>
+                        {{ pantalon_form.pocheavecrabat }}
+                    </div>
+
+                </fieldset>
+
+            </div>
+
+        </div>
+
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+        <!-- COMMENTAIRES -->
+
+        <div class="COM">
+            {{ com_form.commentairepantalon }}
+        </div>
+
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+        <!-- RAW6 -->
+
+        <span class="hr" id="ancre-gilet">
+            <h3> Gilet </h3>
+        </span>
+
+        <div class="rawX">
+
+            <div class="column">
+
+                <fieldset>
+                    <legend><label for="id_giletsociete">GILET</label></legend>
+                    <input name="giletsociete" type="text" id="giletsociete" placeholder="societe" disabled>
+                    <input name="giletnumero" type="text" id="giletnumero" placeholder="numéro" disabled>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend><label for="id_giletpoitrine">1/2 POITRINE</label></legend>
+                    {{ gilet_form.giletpoitrine }}
+                </fieldset>
+
+                <fieldset>
+                    <div class="horizontale">
+                        <label for="id_emboiterdevant">7 EMBOITER DEVANT</label>
+                        {{ gilet_form.emboiterdevant }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_pincealemmanchure">8 Pince a l'emmanchure</label>
+                        {{ gilet_form.pincealemmanchure }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <label for="id_boutonn">Boutons n° :</label>
+                    {{ gilet_form.boutonn }}
+                </fieldset>
+
+            </div>
+
+            <div class="column">
+
+                <fieldset>
+                    <legend><label for="id_giletmodeltailleessaye">MODELE / TAILLE ESSAYE</label></legend>
+                    {{ gilet_form.giletmodeltailleessaye }}
+                </fieldset>
+
+                <fieldset>
+                    <legend><label for="id_giletestomac">1/2 ESTOMAC</label></legend>
+                    {{ gilet_form.giletestomac }}
+                </fieldset>
+
+                <fieldset>
+                    <div class="horizontale">
+                        <label for="id_bordspique">Bords piqué</label>
+                        {{ gilet_form.bordspique }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_bordsnonpique">Bords non piqué</label>
+                        {{ gilet_form.bordsnonpique }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <div class="horizontale">
+                        <label for="id_giletsansboutonniere">Sans boutonnière</label>
+                        {{ gilet_form.giletsansboutonniere }}
+                    </div>
+
+                    <div class="separateur"></div>
+
+                    <label for="id_giletboutonnierecouleur">Boutonnières couleur :</label>
+                    {{ gilet_form.giletboutonnierecouleur }}
+                </fieldset>
+            </div>
+            <div class="column">
+                <fieldset>
+                    <legend><label for="id_giletmodeltaillechoisi">MODELE / TAILLE CHOISI</label></legend>
+                    {{ gilet_form.giletmodeltaillechoisi }}
+                </fieldset>
+                <fieldset>
+                    <legend><label for="id_giletouverture">OUVERTURE</label></legend>
+                    {{ gilet_form.giletouverture }}
+                </fieldset>
+            </div>
+            <div class="column">
+                <fieldset>
+                    <legend><label for="id_largeuralataille">1/2 LARGEUR TAILLE</label></legend>
+                    {{ gilet_form.largeuralataille }}
+                </fieldset>
+                <fieldset>
+                    <legend><label for="id_giletlongueurdevant">LONGUEUR<br>DEVANT</label></legend>
+                    {{ gilet_form.giletlongueurdevant }}
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="COM">
+            {{ com_form.commentairegilet }}
+        </div>
+
+        <div class="btncentre">
+            <input type="submit" class="bouton" value="Envoyer">
+        </div>
+
+    </form>
+
+    <footer>{% now "Y" %} Agence Rural Web Factory | Julien, Hadrien | Tous droits réservés | copyright ©</footer>
+
+    <div id="scrollUp">
+        <a href="#top"><img src="{% static 'img/to_top.png' %}" alt="logotop" /></a>
+    </div>
+
+</body>
+
+</html>

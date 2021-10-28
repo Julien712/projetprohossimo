@@ -1,0 +1,83 @@
+{%  extends 'crud/main.html' %}
+
+{% block content %}
+
+{% if user.is_superuser == True %}
+{%  include 'crud/status.html' %}
+
+<br>
+<div class="row">
+	<div class="col-md-5">
+		<h5>Utilisateurs :</h5>
+		<hr>
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Société</th>
+					<th>Téléphone</th>
+					<th>Adresse</th>
+				</tr>
+
+				{% for user in clients %}
+				<tr>
+					<td>{{user.username}}</td>
+					<td>{{user.profile.telephone_user}}</td>
+					<td>{{user.profile.adresse}}</td>
+				</tr>
+				{% endfor %}
+				
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+		<h5>Fiches de mesures :</h5>
+		<hr>
+		<div class="card card-body">
+			<p>
+				<a class="btn btn-primary btn-sm bg-custom" href="{% url 'creation_fichemesure' user.profile.pk %}">Créer une fiche client</a>
+				<a class="btn btn-outline-primary btn-sm" href="{% url 'recherchefiche' %}">Afficher toutes les fiches clients</a>
+			</p>
+			
+			<table class="table table-sm">
+				<tr>
+					<th>Nom, prénom</th>
+					<th>Date de création</th>
+					<th>Date de réception</th>
+					<th>Société</th>
+					<th>Imprimer</th>
+					<th>Modifier / Supprimer</th>
+				
+				</tr>
+
+				{% for entete in infos %}
+				<tr>
+					<td>{{entete.nom}}</td>
+					<td>{{entete.curdate}}</td>
+					<td>{{entete.reception}}</td>
+					<td>{{entete.societe}}</td>
+					<td><a class="btn btn-sm btn-info" href="{% url 'impression' entete.id_entete  %}">Imprimer</a></td>
+					<td class="modifsuppr">
+						<a class="btn btn-sm btn-warning" href="{% url 'update_fiche' entete.id_entete %}">Modifier</a>
+						<a class="btn btn-sm btn-danger" href="{% url 'delete_fiche' entete.id_entete %}">Supprimer</a>
+					</td>
+					
+				</tr>
+				{% endfor %}
+				
+			</table>
+		</div>
+	</div>
+</div>
+{% endif %}
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+			<p><a class="btn btn-primary btn-sm" href="{% url 'boutique' user.id %}">Accéder à l'interface Boutique</a></p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

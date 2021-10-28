@@ -1,0 +1,52 @@
+{%  extends 'crud/main.html' %}
+
+{% block content %}
+
+<br>
+<div class="container-sm">
+	<div class="row">
+		<div class="col">
+			<div class="card card-body">
+				<form method="get">
+					{{myFilter.form}}
+					<button class="btn btn-primary" type="submit">Rechercher</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="card card-body">
+		<p><a class="btn btn-primary btn-sm bg-custom" href="{% url 'creation_fichemesure' user.profile.pk %}">Créer une fiche client</a></p>
+		<table class="table table-sm">
+			<tr>
+				<th>Nom, prénom</th>
+				<th>Téléphone</th>
+				<th>Email</th>
+				<th>Adresse</th>
+				<th>Date de création</th>
+				<th>Date de réception</th>
+				<th>Société</th>
+				<th>Imprimer</th>
+				<th>Modifier</th>
+				
+			</tr>
+
+			{% for entete in infos %}
+			<tr>
+				<td>{{entete.nom}}</td>
+				<td>{{entete.phone}}</td>
+				<td>{{entete.mail}}</td>
+				<td>{{entete.adresse}}</td>
+				<td>{{entete.curdate}}</td>
+				<td>{{entete.reception}}</td>
+				<td>{{entete.societe}}</td>
+				<td><a class="btn btn-sm btn-info" href="{% url 'impression' entete.id_entete  %}">Imprimer</a></td>
+				<td><a class="btn btn-sm btn-warning" href="{% url 'update_fiche' entete.id_entete %}">Modifier</a></td>
+
+			</tr>
+			{% endfor %}
+
+		</table>
+	</div>
+</div>
+{% endblock %}
